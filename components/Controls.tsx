@@ -5,6 +5,7 @@ type ControlsProps = {
   onNameChange: (value: string) => void;
   font: string;
   onFontChange: (value: string) => void;
+  onDownload: () => void;
 };
 
 export default function Controls({
@@ -12,6 +13,7 @@ export default function Controls({
   onNameChange,
   font,
   onFontChange,
+  onDownload,
 }: ControlsProps) {
   return (
     <div className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -52,6 +54,14 @@ export default function Controls({
         Typing updates the worksheet preview instantly. Drag the text block on
         the right to position it vertically.
       </p>
+
+      <button
+        className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+        type="button"
+        onClick={onDownload}
+      >
+        Download PDF
+      </button>
     </div>
   );
 }

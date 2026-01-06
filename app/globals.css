@@ -21,7 +21,8 @@ body {
 
 @font-face {
   font-family: "Handwriting Print";
-  src: local("Comic Sans MS"), local("Comic Sans"), local("Segoe Print");
+  src: url("/fonts/handwriting-print.ttf") format("truetype"),
+    local("Comic Sans MS"), local("Comic Sans"), local("Segoe Print");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -29,7 +30,8 @@ body {
 
 @font-face {
   font-family: "Handwriting Dotted";
-  src: local("Bradley Hand"), local("Segoe Print"), local("Comic Sans MS");
+  src: url("/fonts/handwriting-dotted.ttf") format("truetype"),
+    local("Bradley Hand"), local("Segoe Print"), local("Comic Sans MS");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -37,7 +39,8 @@ body {
 
 @font-face {
   font-family: "Handwriting Cursive";
-  src: local("Segoe Script"), local("Snell Roundhand"), local("Lucida Handwriting");
+  src: url("/fonts/handwriting-cursive.ttf") format("truetype"),
+    local("Segoe Script"), local("Snell Roundhand"), local("Lucida Handwriting");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

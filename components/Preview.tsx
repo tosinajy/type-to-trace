@@ -80,6 +80,7 @@ export default function Preview({
 
       <div
         ref={containerRef}
+        data-preview-container
         className="relative flex-1 rounded-[32px] border border-white/10 bg-white/95 p-10 text-slate-900 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.45)]"
       >
         <svg
@@ -102,6 +103,7 @@ export default function Preview({
 
         <div
           ref={textRef}
+          data-preview-text
           className="absolute left-12 right-12 cursor-grab select-none rounded-2xl border border-slate-200 bg-white/90 px-6 py-4 text-3xl font-semibold shadow-sm active:cursor-grabbing"
           style={{ top: textTop, fontFamily }}
           onPointerDown={handlePointerDown}
