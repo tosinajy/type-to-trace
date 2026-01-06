@@ -1,5 +1,5 @@
 const nextConfig = {
-  /* config options here */
+  distDir: ".next-build-output",
 };
 
 export default nextConfig;

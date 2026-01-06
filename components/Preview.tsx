@@ -6,6 +6,7 @@ type PreviewProps = {
   name: string;
   textTop: number;
   onTextTopChange: (value: number) => void;
+  font: "print" | "dotted" | "cursive";
 };
 
 type DragState = {
@@ -18,6 +19,7 @@ export default function Preview({
   name,
   textTop,
   onTextTopChange,
+  font,
 }: PreviewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
@@ -58,6 +60,13 @@ export default function Preview({
     }
   };
 
+  const fontFamily =
+    font === "print"
+      ? "\"Handwriting Print\", \"Comic Sans MS\", cursive"
+      : font === "dotted"
+      ? "\"Handwriting Dotted\", \"Bradley Hand\", cursive"
+      : "\"Handwriting Cursive\", \"Segoe Script\", cursive";
+
   return (
     <div className="flex h-full flex-col gap-6">
       <div>
@@ -94,7 +103,7 @@ export default function Preview({
         <div
           ref={textRef}
           className="absolute left-12 right-12 cursor-grab select-none rounded-2xl border border-slate-200 bg-white/90 px-6 py-4 text-3xl font-semibold shadow-sm active:cursor-grabbing"
-          style={{ top: textTop }}
+          style={{ top: textTop, fontFamily }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
